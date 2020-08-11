@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     get "/help", to: "static_pages#help"
     resources :users
     resources :account_activations, only: :edit
+    resources :password_resets, except: %i(show index destroy)
     get "/signup", to: "users#new"
     post "/signup", to: "users#create"
     get "/login", to: "sessions#new"

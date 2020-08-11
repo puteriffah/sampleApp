@@ -12,6 +12,7 @@ en:
 
   profile: "Profile"
   settings: "Settings"
+
   user:
     user: "User"
     title: "Sign up"
@@ -42,6 +43,14 @@ en:
       errors: "error"
       message: "This form contains"
       login: "ERROR! please log in"
+
+  forget:
+    title: "Forgetting Password"
+    success: "Email is sent with password reset instructions"
+    fail: "Email address does not exist"
+    email: "Email"
+    password: "(Forgot password)"
+    submit: "Submit"
 
   signup: "Sign up now!"
   site_name: "Ruby on Rails Tutorial Sample App"
