@@ -23,12 +23,8 @@ class User < ApplicationRecord
     end
 
     def digest string
-      cost = if ActiveModel::SecurePassword.min_cost
-        BCrypt::Engine::MIN_COST
-      else
-        BCrypt::Engine.cost
-      end
-      BCrypt::Password.create string, cost: cost
+      cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
+      BCrypt::Password.create(string, cost: cost)
     end
   end
 
@@ -38,6 +34,7 @@ class User < ApplicationRecord
   end
 
   def authenticated? remember_token
+    return false unless remember_digest
     BCrypt::Password.new(remember_digest).is_password? remember_token
   end
 

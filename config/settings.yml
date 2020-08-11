@@ -3,7 +3,7 @@ links:
     home_page: https://www.railstutorial.org/
     help_page: http://www.railstutorial.org/help
     book_page: https://www.railstutorial.org/book
-
+  gravatar: "http://gravatar.com/emails"
 validations:
   name:
     max_length: 50
@@ -14,3 +14,4 @@ validations:
     min_length: 8
 
 remember_me: "1"
+per_page: 5
