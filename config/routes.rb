@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
-  root "static_pages#home"
+  scope "(:locale)", locale: /en|ru/ do
+    root "static_pages#home"
 
-  get "static_pages/help"
-  get "users/show"
-  get "users/new"
-  get "/signup", to: "users#new"
-  post "/signup", to: "users#create"
-  resources :users
+    get "/home", to: "static_pages#home"
+    get "/help", to: "static_pages#help"
+    resources :users
+    get "/signup", to: "users#new"
+    post "/signup", to: "users#create"
+    get "/login", to: "sessions#new"
+    post "/login", to: "sessions#create"
+    delete "/logout", to: "sessions#destroy"
+  end
 end
