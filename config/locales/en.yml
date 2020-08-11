@@ -21,8 +21,15 @@ en:
     delete_fail: "WARNING! failed to delete. Please try again"
     confirm: "Are you sure?"
     delete_user: "Delete"
+
     new:
       confirmation: "Password Confirmation"
+      link_activate: "Click on the link below to activate your account:"
+      activate: "Please check your email to activate your account"
+      activate_success: "Account activated!"
+      activate_fail: "Invalid activation link"
+      check_mail: "Account not activated. Check your email for the activation link."
+      check: "Please check your email to activate your account."
       password: "Password"
       name: "Name"
       email: "Email"
