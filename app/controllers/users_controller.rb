@@ -12,10 +12,10 @@ class UsersController < ApplicationController
     @user = User.new user_params
 
     if @user.save
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = t "user.new.welcome"
       redirect_to @user
     else
-      flash[:danger] = "Danger! please try again"
+      flash[:danger] = t "user.new.danger"
       render :new
     end
   end
