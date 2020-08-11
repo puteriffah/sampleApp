@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, except: %i(show new create)
-  before_action :load_user, except: %i(index new create)
+  before_action :logged_in_user, except: %i(new create)
   before_action :correct_user, only: %i(edit update)
+  before_action :load_user, only: %i(edit update destroy show)
   before_action :admin_user, only: :destroy
 
   def index
@@ -50,6 +50,20 @@ class UsersController < ApplicationController
       flash[:danger] = t "user.delete_fail"
     end
     redirect_to users_path
+  end
+
+  def following
+    @title = "Following"
+    @user = User.find_by(id: params[:id])
+    @users = @user.following.paginate(page: params[:page]).per Settings.per_page
+    render "show_follow"
+  end
+
+  def followers
+    @title = "Followers"
+    @user = User.find_by(id: params[:id])
+    @users = @user.followers.paginate(page: params[:page]).per Settings.per_page
+    render "show_follow"
   end
 
   private

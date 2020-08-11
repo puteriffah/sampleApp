@@ -131,3 +131,12 @@ en:
     image_format: "must be a valid image format"
     size_format: "should be less than 5MB"
     alert: "Maximum file size is 5MB. Please choose a smaller file."
+
+  follow:
+    follow: "Follow!"
+    unfollow: "Unfollow!"
+    following: "%{count} Following"
+    followers: "%{count} Followers"
+    profile: "Profile"
+    micrposts: "Microposts:"
+    fail: "Failed to follow"
