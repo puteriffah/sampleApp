@@ -7,6 +7,7 @@ gem "dotenv-rails", groups: [:development, :test]
 gem "rails", "~> 6.0.3", ">= 6.0.3.2"
 gem "rails-i18n"
 gem "mysql2"
+gem "bootstrap-sass", "3.4.1"
 gem "config"
 gem "puma", "~> 4.1"
 gem "sass-rails", ">= 6"
