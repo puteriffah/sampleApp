@@ -94,6 +94,7 @@ input.btn.btn-primary {
 
 #error_explanation {
   color: $red;
+
   ul {
     color: $red;
     margin: 0 0 30px;
@@ -102,7 +103,23 @@ input.btn.btn-primary {
 
 .field_with_errors {
   @extend .has-error;
+
   .form-control {
     color: $state-danger-text;
   }
+}
+
+.checkbox {
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  span {
+  font-weight: normal;
+  margin-left: 20px;
+  }
+}
+
+#session_remember_me {
+  margin-left: 0;
+  width: auto;
 }
