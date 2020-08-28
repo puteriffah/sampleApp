@@ -4,6 +4,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "2.7.0"
 
 gem "dotenv-rails", groups: [:development, :test]
+gem "faker"
+gem "kaminari"
+gem "bootstrap-will_paginate", "1.0.0"
 gem "rails", "~> 6.0.3", ">= 6.0.3.2"
 gem "rails-i18n"
 gem "mysql2"
