@@ -13,6 +13,16 @@ en:
   profile: "Profile"
   settings: "Settings"
 
+  home:
+    message: "Ruby on Rails"
+    homepage: "This is the home page for the "
+    sample: " sample application."
+  help:
+    message: "Ruby on Rails Help page"
+    book: "book"
+    page: "Get help on the Ruby on Rails Tutorial at the "
+    sample: "To get help on this sample app, see the "
+
   user:
     user: "User"
     title: "Sign up"
@@ -78,3 +88,46 @@ en:
     book: "book"
     page: "Get help on the Ruby on Rails Tutorial at the "
     sample: "To get help on this sample app, see the "
+
+  shared:
+      micropost_form:
+        alert_detail: "Maximum file size is 5MB. Please choose a smaller file."
+        placeholder: "Compose new micropost..."
+        post_submit: "Post"
+      user_info:
+        profile_link: "View my profile"
+        suffix_count: "micropost"
+
+  errors:
+    messages:
+      invalid_pic: "must be a valid image format"
+      less_than: "should be less than 5MB"
+
+  microposts:
+    notfound: "No micropost is found"
+    create:
+      fail: "Micropost create failed!"
+      success: "Micropost successfully created!"
+    delete:
+      success: "Micropost deleted."
+      fail: "Failed to delete micropost!"
+      confirm: "Are you sure?"
+    prefix_time: "Posted"
+    suffix_time: " ago."
+
+    timestamp:
+      posted: "Posted "
+      ago: " ago."
+      delete: "delete"
+      confirm: "You sure? "
+
+    placeholder: "Compose new micropost..."
+    post: "Post"
+    suffix: "micropost"
+    view: "View my profile"
+    feed: "Micropost Feed"
+
+    error:
+    image_format: "must be a valid image format"
+    size_format: "should be less than 5MB"
+    alert: "Maximum file size is 5MB. Please choose a smaller file."
