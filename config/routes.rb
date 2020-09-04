@@ -8,10 +8,16 @@ Rails.application.routes.draw do
     resources :account_activations, only: :edit
     resources :password_resets, except: %i(show index destroy)
     resources :microposts, only: %i(create destroy)
+    resources :relationships, only: %i(create index destroy)
     get "/signup", to: "users#new"
     post "/signup", to: "users#create"
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
+    resources :users do
+      member do
+        get :following, :followers
+      end
+    end
   end
 end
